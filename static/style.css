@@ -1,0 +1,209 @@
+/* General styling */
+body {
+    background: #2e2e2e; /* Dark theme for the page */
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #fff;
+}
+
+/* Chat container */
+.chat-container {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+/* Chat box */
+#chat {
+    width: 50%;
+    height: 60%;
+    background: #333;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+    position: relative;
+    margin-bottom: 20px;
+}
+
+/* Messages container */
+#messages {
+    flex-grow: 1;
+    overflow-y: auto;
+    margin-bottom: 15px;
+    padding-right: 10px;
+    max-height: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Message bubbles */
+.message {
+    max-width: 80%;
+    margin-bottom: 12px;
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    line-height: 1.4;
+    word-wrap: break-word;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* User message */
+.user-message {
+    background-color: #6c5ce7;
+    color: white;
+    align-self: flex-end;
+    border-radius: 20px 20px 0 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Bot message */
+.bot-message {
+    background-color: #00bcd4;
+    color: white;
+    align-self: flex-start;
+    border-radius: 20px 20px 20px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Error message */
+.error-message {
+    background-color: #ff6b6b;
+    color: white;
+    text-align: center;
+    border-radius: 20px;
+    padding: 12px;
+}
+
+/* Input area styling */
+.input-area {
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+}
+
+input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    border: 2px solid #888;
+    border-radius: 20px;
+    font-size: 14px;
+    outline: none;
+    color: #fff;
+    background-color: #444;
+}
+
+input[type="text"]:focus {
+    border-color: #00bcd4; /* Glowing effect on focus */
+}
+
+button {
+    width: 15%;
+    padding: 10px;
+    background-color: #00bcd4;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background-color: #0097a7;
+}
+
+button:active {
+    background-color: #00838f;
+}
+
+/* Loading indicator */
+#loading {
+    font-size: 14px;
+    color: #00bcd4;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Robot design */
+.robot {
+    width: 200px;
+    height: 200px;
+    margin-top: 20px;
+    position: absolute;
+    cursor: pointer;
+    transition: all 0.5s ease; /* Smooth transition for movement */
+}
+
+.robot-head {
+    position: relative;
+    width: 200%;
+    height: 100%;
+    background-color: #666;
+    border-radius: 50%;
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease; /* Smooth transition for movement */
+}
+
+/* Robot eyes and mouth styles (same as before) */
+.robot-eyes {
+    position: absolute;
+    top: 35%;
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.robot-eye-left, .robot-eye-right {
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+    animation: blink 5s infinite; /* Blinking animation */
+}
+
+.robot-eye-left {
+    animation-delay: 0.5s;
+}
+
+.robot-eye-right {
+    animation-delay: 2.5s;
+}
+
+/* Mouth animation */
+.robot-mouth {
+    position: absolute;
+    bottom: 20px;
+    width: 90px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 0 0 50px 50px;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    animation: smile 3s infinite alternate;
+}
+
+/* Eye blinking and smile animation */
+@keyframes blink {
+    0%, 100% { height: 40px; }
+    50% { height: 10px; }
+}
+
+@keyframes smile {
+    0% { transform: scaleX(1); }
+    100% { transform: scaleX(1.2); }
+}
+
